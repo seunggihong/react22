@@ -3,7 +3,7 @@ export default function Article(props) {
     <div>
       <article>
         <h2>{props.title}</h2>
-        Hello, {props.body}
+        {props.body}
       </article>
     </div>
   );

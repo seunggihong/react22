@@ -5,11 +5,11 @@ export default function Nav(props) {
     list.push(
       <li key={t.id}>
         <a
-          id={t.title}
-          href={"/read" + t.id}
+          id={t.id}
+          href={"/read/" + t.id}
           onClick={(event) => {
             event.preventDefault();
-            props.onChangeMode(event.target.id);
+            props.onChangeMode(Number(event.target.id));
           }}
         >
           {t.title}
