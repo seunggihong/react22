@@ -1,14 +1,10 @@
-import React, { Component } from "react";
-
-export default class Article extends Component {
-  render() {
-    return (
-      <div>
-        <article>
-          <h2>Welcome</h2>
-          Hello, WEB
-        </article>
-      </div>
-    );
-  }
+export default function Article(props) {
+  return (
+    <div>
+      <article>
+        <h2>{props.title}</h2>
+        Hello, {props.body}
+      </article>
+    </div>
+  );
 }
