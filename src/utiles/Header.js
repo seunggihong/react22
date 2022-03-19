@@ -2,7 +2,15 @@ function Header(props) {
   return (
     <header>
       <h1>
-        <a href="/">{props.title}</a>
+        <a
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            props.onChangeMode();
+          }}
+        >
+          {props.title}
+        </a>
       </h1>
     </header>
   );

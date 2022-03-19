@@ -12,8 +12,18 @@ function App() {
   ];
   return (
     <div>
-      <Header title="WEB"></Header>
-      <Nav topics={topics}></Nav>
+      <Header
+        title="WEB"
+        onChangeMode={() => {
+          alert("Header");
+        }}
+      ></Header>
+      <Nav
+        topics={topics}
+        onChangeMode={(title) => {
+          alert(title);
+        }}
+      ></Nav>
       <Article title="Welcome" body=""></Article>
     </div>
   );

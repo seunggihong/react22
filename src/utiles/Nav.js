@@ -4,7 +4,16 @@ export default function Nav(props) {
     let t = props.topics[index];
     list.push(
       <li key={t.id}>
-        <a href={"/read" + t.id}>{t.title}</a>
+        <a
+          id={t.title}
+          href={"/read" + t.id}
+          onClick={(event) => {
+            event.preventDefault();
+            props.onChangeMode(event.target.id);
+          }}
+        >
+          {t.title}
+        </a>
       </li>
     );
   }
